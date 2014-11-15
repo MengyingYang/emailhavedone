@@ -1,13 +1,16 @@
 
 
      <% provide(:title, @user.name) %>
-    <div class="row">
+    <section>
+            <%= render 'shared/ppersonal' %>
+          </section>
+
       <aside class="span4">
         <section>
-          <h1>
+          <h3>
             <%= gravatar_for @user %>
             <%= @user.name %>
-          </h1>
+          </h3>
         </section>
       </aside>
       <div class="span8">
@@ -18,5 +21,6 @@
           </ol>
         <% end %>
       </div>
-
+     
+          
     </div> 

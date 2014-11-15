@@ -13,6 +13,13 @@
       </head>
       <body>
         <%= render 'layouts/header' %> 
+                <div id="header">
+  
+
+  
+
+
+
 
         <div class="container">
           <% flash.each do |key, value| %>         <!-- START NEW CODE  -->
@@ -22,5 +29,5 @@
           <%= render 'layouts/footer' %>
           <%= debug(params) if Rails.env.development? %> 
         </div>
-      </body>
-    </html>
+
+       

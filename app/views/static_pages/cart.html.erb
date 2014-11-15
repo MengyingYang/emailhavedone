@@ -1,0 +1,140 @@
+
+
+     <% provide(:title, 'Cart') %>
+    <div class="shopping_cart_procedure"><span>1、我的购物车</span><span>   2、填写订单</span><span style="width:175px; padding:0;">3、完成订单</span>  </div>
+		
+</div>
+<!-- logo end -->
+   
+<div class="shoppingcart_wrapper">
+    <!--提示一-->
+		<div class="shoppingcart_tips" id = "J_cartTip1"  style = "display: none;" >
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td style="font-weight:bold;width:70px">温馨提示：</td>
+					<td>
+						<ul>
+                        </ul>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<!--提示二-->
+		<div class="shoppingcart_tips" id = "J_cartTip2" style = "display: none;">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td style="font-weight:bold;width:45px">通知:</td>
+					<td>
+						按照相关部门指示，为确保奥运期间运输环节的安全，部分商品，机电装置产品、电池、类似肥皂块状、膏状、类似面粉、化肥等粉末状物品（含化工类产品）不明金属、装有各种气体的密闭装置、各种液体产品（化妆品、洗发水、沐浴露类生活用品），<span class="red">于2008年6月5日始，将不能通过普通邮递、EMS方式进行配送</span>，给您带来的不便敬请谅解！
+					</td>
+				</tr>
+				<tr>
+					<td style="font-weight:bold;width:45px">活动：</td>
+					<td>圣诞礼品免运费，当当网百货100返30</td>
+				</tr>
+			</table>
+		</div>
+    	<p class="login_tip"><a style="margin-right:10px;" href="http://help.dangdang.com/details/page14" target="_blank">运费说明>></a>
+        <a href="http://help.dangdang.com/details/page9" target="_blank">商家说明>></a></p> 
+ <div class="shoppingcart" >
+            <div class="shoppingcart_list empty_cart" id = "J_noProduct" style = "display: none;">
+            	<p>您的购物车中暂时没有商品，您可以：</p>
+                <p><a href="http://www.dangdang.com/" class="org_btnb" target = "_blank">回到首页</a><a href="http://promo.dangdang.com/" class="org_btnb">看看促销</a></p>
+            </div>
+	    <div id = "J_topBar" style = "position: relative; z-index: 5000; width: 960px;">
+			
+	    </div>
+	    <div class="shoppingcart_list" id = "J_cartContent">
+            	<table cellspacing="0" cellpadding="0" border="0">
+                    <thead>
+						<tr id = "J_cartTitle">
+                            <th class="row1"><input type="checkbox" value="all" name = "selectAll" id = "J_selectAll" checked ="checked" sign = "1" onclick="cart.selectAll(this)"/></th>
+                            <th><span id = "F_selectAll" sign = "1" class="row2_th_span" onclick="cart.selectAll(this)">全选</span>商品名称</th>
+							<th>  当当价  </th>
+							<th>促销价</th>
+							<th>数量</th>
+							<th>小计</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+				    <tbody>
+					</tbody>
+				</table>
+                <div class="shoppingcart_loading" id = "J_cartLoading"><img height="30" width="30" src="images/loading.gif"></div>
+				<!--totle price count-->
+                <div class="shoppingcart_total" id = "J_totalMoneyBlock">
+		          <div class="shoppingcart_total_left shoppingcart_total_left2" style="display: block">
+                     <div id="J_leftBar">
+                       <input type="checkbox" value="all" name="selectAll" id="J_selectAll_2" sign="1" checked="checked" onclick="cart.selectAll(this)"><span id = "F_selectAll_2" sign = "1" onclick="cart.selectAll(this)">全选</span>
+                        <a href="javascript:;" class="mr15" id="J_removeAllBtn">批量删除</a>
+                        <a href="javascript:cart.noStockProductDelte(1);" class="J_removeNoStockProductBtn"  style="visibility:hidden">删除缺货商品</a>
+                        <div class="floating_tip">
+                            <dl>
+                                <dt class="side_nav" id="J_wishBtn"><a href="javascript:cart.myWish();" name="myWish" id="myWish">我的收藏</a><span class="floating_tip_num"></span></dt>
+                                <dd class="floating_box" style = "display: none;" id = "J_wishContent">
+                                    <p class="out_link">
+                                        <a href="#">查看我的收藏</a>
+                                    </p>
+                                    <div class="floating_goods"><ul></ul></div>
+                                </dd>
+                                <dt class="side_nav" id="J_recentView">
+                                    <a href="javascript:cart.recentViewAnimate();" name="myRecentView" id="myRecentView">最近查看</a>
+                                </dt>
+                                <dd class="floating_box" style = "display: none;left:89px;" id = "J_recentViewContent">
+                                    <div class="floating_goods">
+                                        <ul>
+                                            
+                                        </ul>
+                                    </div>
+                                </dd>
+                    
+                            </dl>
+                        </div>
+                        <p class="shoppingcart_total_left shoppingcart_total_left_x">
+                        <span class="weipinbox" id="weipinboxarea" style="display:none;" >购物车中有<a class="weipin" href="http://v.dangdang.com" target = "_blank">尾品汇</a>或<a href="http://new.dangdang.com"  target = "_blank" class="xingpin">新品汇</a>商品，请在<span><strong style = "font-weight: normal;" id = "J_limitedMinute">00</strong>分<strong style = "font-weight: normal;" id = "J_limitedSecond">00</strong>秒</span>内结算(&nbsp;<a href="javascript:;"  class="weipininfo" >限时?</a>)</span>
+                        </p>
+                    </div>
+		          </div>
+                	<div class="fr">
+                          <p><span class="cartsum"><span id = "J_totalProductCount"></span>件商品金额总计：</span><span class="plus-minus"></span><span style = "font-family: Arial; font-size: 14px;">&yen;</span><span class="price" id = "J_totalMoney"></span></p>
+                          <p id = "J_totalFavorMoneyBlock" style = "display: none;"><span class="cartsum">促销：</span><span class="plus-minus">-</span><span style = "font-family: Arial; font-size: 14px;">&yen;</span><span class="price" id = "J_totalFavorMoney">0.00</span><a href="javascript:cart.showFavor();" class="arrow_down" id = "J_showCollectFavor"></a></p>
+                          <p class="subtotal"><span class="cartsum">应付总额(不含运费)：</span><span class="plus-minus"></span><span style = "color: #C30; font-size: 18px; font-weight: bold; font-family: Arial;">&yen;</span><span class="price J_totalPayMoney">0.00</span></p>
+                   </div>
+					<p><a href="javascript:cart.checkout();" class="total_btnbig J_checkOrder" name="checkout_btn" id="checkout_btn"></a></p>
+                    <div class="clear"></div>
+                </div>
+                <div id="shoppingcart_total2" class="shoppingcart_total shoppingcart_total2" style="visibility:hidden;">
+					<div class="shoppingcart_total_left shoppingcart_total_left2">
+                        <input type="checkbox" value="all" name="selectAll" id="J_selectAll_3" sign="1" checked="checked" onclick="cart.selectAll(this)"/><span id = "F_selectAll_3" sign = "1" onclick="cart.selectAll(this)">全选</span>
+						<a class="mr15" href="javascript:;" id="J_removeAllBtn_2">批量删除</a>
+						<a href="javascript:cart.noStockProductDelte(1);" class="J_removeNoStockProductBtn"  style="visibility:hidden">删除缺货商品</a>
+						<div class="floating_tip">
+							<dl>
+								<dt class="side_nav" id="J_wishBtn_2"><a href="javascript:cart.myWish();" name="myWish" id="myWish">我的收藏</a><span class="floating_tip_num"></span></dt>
+								<dd class="floating_box" style = "display: none;" id = "J_wishContent_2">
+									<p class="out_link"><a href="#">查看我的收藏</a></p>
+									<div class="floating_goods" >
+										<ul>
+											
+										</ul>
+									</div>
+								</dd>
+								<dt class="side_nav" id="J_recentView_2"><a href="javascript:cart.recentViewAnimate();" name="myRecentView" id="myRecentView">最近查看</a></dt>
+								<dd class="floating_box" style = "left:89px;" id = "J_recentViewContent_2">
+									<div class="floating_goods">
+										<ul>
+											
+										</ul>
+									</div>
+								</dd>
+							</dl>	
+						</div>
+					</div>
+                	<div class="fr">
+                        <p class="subtotal"><span class="cartsum">应付总额(不含运费)：</span><span class="plus-minus"></span><span style = "color: #C30; font-size: 18px; font-weight: bold; font-family: Arial;">&yen;</span><span class="price J_totalPayMoney">0.00</span></p>
+                    </div>
+                    <p><a href="javascript:cart.checkout();" class="total_btnbig J_checkOrder" name="checkout_btn" id="checkout_btn"></a></p>
+                    <div class="clear"></div>
+                </div>
+            </div>
+</div>

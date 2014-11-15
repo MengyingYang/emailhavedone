@@ -1,0 +1,36 @@
+<%i=0 %>
+<table style="border:solid 0px #F60" width="550px"> 
+	<tr>
+		<%@tabfoods.each.do |tabfood|%>
+		<td>
+			<a href ="/tabfoods/show?id=<%=tabfood.id%>">
+				<img src="/assets/<%=tabfood,fImg %>.JPG" alt=""aligm="centre" border="0" width = "100px"></a><br/>名称：<%＝tabfood.fSPrice%> <br/>价格：<%=tabfood.fSPrice%><br/>
+				<a href="/tabfoods/addcart?id=<%=tabfood.id%>"><img src="/assets/55.jpg" alt="" border="0"></a>
+
+
+
+
+
+
+		</td>
+<%i = i+1%>
+<%if i%3==0 then%>
+
+
+
+
+
+
+	</tr>
+	
+
+
+
+
+
+
+
+
+
+</table> 
+<br/>
