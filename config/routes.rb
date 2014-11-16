@@ -2,6 +2,10 @@
 
 Rails.application.routes.draw do
   
+  resources :line_items
+
+  resources :carts
+
   get 'store/index'
 
   resources :products
@@ -23,7 +27,7 @@ resources :microposts, only: [:create, :destroy]     # NEW LINE
 
   get 'static_pages/home'
 
-  get 'static_pages/cart'
+  get 'static_pages/help'
 
   get "static_pages/about" 
 
@@ -39,7 +43,7 @@ resources :microposts, only: [:create, :destroy]     # NEW LINE
 
   root to: 'static_pages#home'
   match '/cart',    to: 'static_pages#cart' , via: 'get'
-  match '/about',   to: 'static_pages#about', via: 'get'
+  
   match '/contact', to: 'static_pages#contact', via: 'get'
   
   # The priority is based upon order of creation: first created -> highest priority.

@@ -6,8 +6,7 @@ class StaticPagesController < ApplicationController
           end
   end
 
-  def cart
-  end
+  
 
   def about 
    # NEW

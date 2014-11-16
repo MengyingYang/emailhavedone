@@ -16,7 +16,7 @@
 @import "bootstrap";
 
 #banner {  
-  background: #9c9;  
+  background: #FED;  
   padding: 10px;  
   border-bottom: 2px solid;  
   font: small-caps 40px/40px "Times New Roman", serif;  
@@ -50,7 +50,7 @@
 #sidebar1 {  
   float: left;  
   padding: 13em 2em;  
-  width: 8em;  
+  width: 4em;  
   background: #FFA;  
 
 }  
