@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def about 
    # NEW
   end
+
+  def administrator
+  end
   
 end
 

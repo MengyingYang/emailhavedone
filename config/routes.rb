@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # just remember to delete public/index.html.  
   # root :to => 'welcome#index'  
   #add  
-  root to: "store#index", as: "store" #add 
+  #root to: "store#index", as: "store" #add 
   # ...  
 
 resources :users 
@@ -30,6 +30,8 @@ resources :microposts, only: [:create, :destroy]     # NEW LINE
   get 'static_pages/help'
 
   get "static_pages/about" 
+
+  get "static_pages/administrator" 
 
 
 

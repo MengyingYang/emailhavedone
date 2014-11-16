@@ -1,7 +1,10 @@
 <%= form_for(@micropost) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       <div class="field">
-        <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+      	<span><h3>Personal Signature</h3></span>
+      	<span><h5>How are you feeling today?Let's write down!</h5></span>
+        <%= f.text_area :content, placeholder: "Record the feelings of everyday..." %>
+        <h6>(You can clike Account>>Profile button at the top-right corner to retrospect the moods you recorded before)</h6>
       </div>
       <%= f.submit "Post", class: "btn btn-large btn-primary" %>
     <% end %>

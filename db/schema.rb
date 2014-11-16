@@ -11,17 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141116123850) do
+ActiveRecord::Schema.define(version: 20141116184013) do
+
+# Could not dump table "administrators" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "carts", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "comments", force: true do |t|
-    t.string   "content"
-    t.integer  "user_id"
-    t.integer  "micropost_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,22 +45,11 @@ ActiveRecord::Schema.define(version: 20141116123850) do
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
 
-  create_table "microposts_tags", id: false, force: true do |t|
-    t.integer "micropost_id"
-    t.integer "tag_id"
-  end
-
   create_table "products", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.string   "image_url"
     t.decimal  "price",       precision: 8, scale: 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tags", force: true do |t|
-    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

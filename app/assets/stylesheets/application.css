@@ -49,8 +49,8 @@
   
 #sidebar1 {  
   float: left;  
-  padding: 13em 2em;  
-  width: 4em;  
+  padding: 8em 2em;  
+  width: 7em;  
   background: #FFA;  
 
 }  
@@ -62,8 +62,6 @@
 #side li {  
     list-style: none;  
 }  
-
-  
   
 /* END_HIGHLIGHT */  /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
