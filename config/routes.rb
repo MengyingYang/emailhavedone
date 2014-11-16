@@ -2,7 +2,20 @@
 
 Rails.application.routes.draw do
   
+  get 'store/index'
+
   resources :products
+
+  resources :products  
+  
+  # ...  
+  
+  # You can have the root of your site routed with "root"  
+  # just remember to delete public/index.html.  
+  # root :to => 'welcome#index'  
+  #add  
+  root to: "store#index", as: "store" #add 
+  # ...  
 
 resources :users 
 resources :sessions, only: [:new, :create, :destroy]  # NEW LINE
@@ -14,7 +27,6 @@ resources :microposts, only: [:create, :destroy]     # NEW LINE
 
   get "static_pages/about" 
 
-  get "tabfoods/index" 
 
 
 

@@ -3,7 +3,7 @@
      <!DOCTYPE html>
     <html>
       <head>
-        <title>Ruby on Rails Tutorial Sample App | <%= yield(:title) %></title>
+        <title>A Bite of China | <%= yield(:title) %></title>
         <%= stylesheet_link_tag "application", media: "all" %>
         <%= javascript_include_tag "application" %>
         <%= csrf_meta_tags %>
@@ -12,9 +12,34 @@
         <![endif]-->
       </head>
       <body>
+        <div id="banner">  
+     
+    <%= @page_title || "A Bite of China" %><!-- <label id="code.depot.e.title"/> -->  </div>
         <%= render 'layouts/header' %> 
-                <div id="header">
-  
+                
+
+
+    
+
+    <div id="sidebar1">
+      <font color="red">我们的宗旨是：<br>你是我们的上帝</font>
+      <div class="diveleftCart"><a href="/tabflowers/checkout" class="link">查看购物车</a>
+      </div>
+      
+
+    </div>
+
+    <div class="diveleftShopp">
+    </div>
+
+      </div>
+
+
+
+
+        
+
+
 
   
 
